@@ -46,18 +46,38 @@ jobs:
         run: ./gradlew :app:testDebugUnitTest
 
       # Decoded outside the workspace so no artifact glob can reach it.
-      - name: Decode the signing keystore
+      # Decoded outside the workspace so no artifact glob can reach it.
+      - name: Decode and check the signing keystore
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
         run: |
-          if [ -z "$KEYSTORE_BASE64" ]; then
-            echo "::error::KEYSTORE_BASE64 is not set - add the signing secrets to this repository"
+          set -euo pipefail
+          for v in KEYSTORE_BASE64 KEYSTORE_PASSWORD KEY_ALIAS; do
+            if [ -z "${!v}" ]; then
+              echo "::error::$v is not set - add the signing secrets to this repository"
+              exit 1
+            fi
+          done
+
+          # Keep only base64 characters. Whatever shell set the secret may have
+          # wrapped the value, appended a newline, or led with a byte-order
+          # mark, and base64 -d rejects all three with the same opaque
+          # "invalid input".
+          keystore="$RUNNER_TEMP/release.keystore"
+          if ! printf '%s' "$KEYSTORE_BASE64" | tr -cd 'A-Za-z0-9+/=' | base64 -d > "$keystore"; then
+            echo "::error::KEYSTORE_BASE64 is not valid base64 - re-set it from the keystore file"
             exit 1
           fi
-          # tr guards against the newline a shell pipeline may have appended
-          # when the secret was set; base64 -d would reject it.
-          printf '%s' "$KEYSTORE_BASE64" | tr -d '[:space:]' | base64 -d > "$RUNNER_TEMP/release.keystore"
-          echo "Decoded $(stat -c%s "$RUNNER_TEMP/release.keystore") bytes"
+          echo "Decoded $(stat -c%s "$keystore") bytes"
+
+          # Fail here rather than three minutes later inside Gradle, and
+          # distinguish a corrupt file from a wrong password or wrong alias.
+          if ! keytool -list -storetype PKCS12 -keystore "$keystore" -storepass "$KEYSTORE_PASSWORD" -alias "$KEY_ALIAS"; then
+            echo "::error::The keystore did not open - check KEYSTORE_PASSWORD and that KEY_ALIAS exists in it"
+            exit 1
+          fi
 
       - name: Build the signed release APK
         env:
