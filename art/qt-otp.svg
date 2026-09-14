@@ -1,0 +1,68 @@
+<svg width="100%" viewBox="205 58 270 422" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>A cute cartoon grey kitten peeking over the top of the OTP vault shield icon</title>
+<desc>A round, grey tabby cartoon kitten with pointed ears and whiskers peeks over the top edge of a green shield-and-padlock badge, paws hooked over the edge in front of the badge, smiling. Transparent background, cropped tightly.</desc>
+
+<!-- Source of truth for the app icon. The Android VectorDrawables under
+     app/src/main/res/drawable are traced from this file:
+       ic_vault_mark.xml         - faithful copy, used in-app
+       ic_launcher_foreground.xml - badge dropped, shield enlarged and
+                                    simplified so it survives a 48dp render
+       ic_launcher_monochrome.xml - shield and padlock only, for themed icons
+     Keep them in step when this changes. -->
+
+<rect x="230" y="240" width="220" height="220" rx="30" fill="#294a2f"/>
+
+<g transform="translate(340 350) scale(0.39) translate(-200.5 -221)">
+<path fill="none" stroke="#abd4b2" stroke-width="24" stroke-linejoin="round" stroke-linecap="round" d="M200.5 18 L28.5 79 C25 132 25 192 35 238 C50 300 95 376 200.5 426 C306 376 351 300 366 238 C376 192 376 132 372.5 79 Z"/>
+<path fill="none" stroke="#71a071" stroke-width="20" d="M311.5 226 A111 111 0 0 1 200.5 337"/>
+<path fill="none" stroke="#c0ddba" stroke-width="20" d="M200.5 337 A111 111 0 0 1 135.3 136.2"/>
+<g transform="translate(294.5 168)" fill="#c0ddba">
+<rect x="-8" y="-38" width="16" height="20" rx="3"/>
+<rect x="-8" y="-38" width="16" height="20" rx="3" transform="rotate(45)"/>
+<rect x="-8" y="-38" width="16" height="20" rx="3" transform="rotate(90)"/>
+<rect x="-8" y="-38" width="16" height="20" rx="3" transform="rotate(135)"/>
+<rect x="-8" y="-38" width="16" height="20" rx="3" transform="rotate(180)"/>
+<rect x="-8" y="-38" width="16" height="20" rx="3" transform="rotate(225)"/>
+<rect x="-8" y="-38" width="16" height="20" rx="3" transform="rotate(270)"/>
+<rect x="-8" y="-38" width="16" height="20" rx="3" transform="rotate(315)"/>
+<path fill-rule="evenodd" d="M0-28A28 28 0 1 1 0 28A28 28 0 1 1 0-28Z M0-14A14 14 0 1 0 0 14A14 14 0 1 0 0-14Z"/>
+</g>
+<path fill="none" stroke="#294a2f" stroke-width="16" stroke-linejoin="round" d="M130 180 A14 14 0 0 1 144 166 L257 166 A14 14 0 0 1 271 180 L271 235 A70.5 70.5 0 0 1 130 235 Z"/>
+<path fill="none" stroke="#c0ddba" stroke-width="19" d="M161 172 L161 128.5 A39.5 39.5 0 0 1 240 128.5 L240 172"/>
+<path fill="#c0ddba" fill-rule="evenodd" d="M130 180 A14 14 0 0 1 144 166 L257 166 A14 14 0 0 1 271 180 L271 235 A70.5 70.5 0 0 1 130 235 Z M190.5 235 A18 18 0 1 1 210.5 235 L213.5 250 A13 13 0 0 1 187.5 250 Z"/>
+</g>
+
+<path d="M255 160 L235 78 L312 128 Z" fill="#aab2ba" stroke="#8a929a" stroke-width="3" stroke-linejoin="round"/>
+<path d="M425 160 L445 78 L368 128 Z" fill="#aab2ba" stroke="#8a929a" stroke-width="3" stroke-linejoin="round"/>
+<path d="M260 150 L248 100 L297 132 Z" fill="#e6c9cf"/>
+<path d="M420 150 L432 100 L383 132 Z" fill="#e6c9cf"/>
+
+<path d="M225 240 A115 115 0 0 1 455 240 L455 260 L225 260 Z" fill="#c7cdd3" stroke="#9aa3ab" stroke-width="3"/>
+
+<ellipse cx="340" cy="225" rx="58" ry="40" fill="#f2f4f6"/>
+
+<path d="M270 138 L285 163" stroke="#8a929a" stroke-width="6" stroke-linecap="round" fill="none"/>
+<path d="M300 118 L310 148" stroke="#8a929a" stroke-width="6" stroke-linecap="round" fill="none"/>
+<path d="M410 138 L395 163" stroke="#8a929a" stroke-width="6" stroke-linecap="round" fill="none"/>
+<path d="M380 118 L370 148" stroke="#8a929a" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+<circle cx="300" cy="188" r="15" fill="#3a3f45"/>
+<circle cx="380" cy="188" r="15" fill="#3a3f45"/>
+<circle cx="305" cy="183" r="5" fill="#ffffff"/>
+<circle cx="385" cy="183" r="5" fill="#ffffff"/>
+
+<ellipse cx="266" cy="222" rx="20" ry="11" fill="#f2b8c6" opacity="0.6"/>
+<ellipse cx="414" cy="222" rx="20" ry="11" fill="#f2b8c6" opacity="0.6"/>
+
+<path d="M330 212 L350 212 L340 224 Z" fill="#e07a8f"/>
+<path d="M340 224 L340 232" stroke="#3a3f45" stroke-width="4" stroke-linecap="round" fill="none"/>
+<path d="M300 238 Q340 266 380 238" stroke="#3a3f45" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+<path d="M230 216 L285 224" stroke="#8a929a" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M228 234 L283 234" stroke="#8a929a" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M450 216 L395 224" stroke="#8a929a" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M452 234 L397 234" stroke="#8a929a" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+<ellipse cx="270" cy="250" rx="32" ry="24" fill="#c7cdd3" stroke="#9aa3ab" stroke-width="3" transform="rotate(-8 270 250)"/>
+<ellipse cx="410" cy="250" rx="32" ry="24" fill="#c7cdd3" stroke="#9aa3ab" stroke-width="3" transform="rotate(8 410 250)"/>
+</svg>

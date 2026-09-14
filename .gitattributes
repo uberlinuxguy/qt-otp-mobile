@@ -1,0 +1,10 @@
+# Keep line endings predictable regardless of each contributor's core.autocrlf.
+* text=auto eol=lf
+*.bat text eol=crlf
+gradlew text eol=lf
+
+# Binary / fixture files git must not touch.
+*.jar binary
+*.keystore binary
+*.png binary
+*.otpv binary

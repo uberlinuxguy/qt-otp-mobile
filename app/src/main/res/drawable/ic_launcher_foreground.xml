@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Adaptive-icon foreground: the kitten sitting on top of the vault shield.
+
+  This is art/qt-otp.svg with two deliberate changes, both forced by the size
+  a launcher icon is actually drawn at:
+
+    * The badge is gone. It was a rounded square in #294A2F, which is exactly
+      what @color/ic_launcher_background paints behind this layer, so keeping
+      it would only have duplicated the background inside the mask.
+    * The shield is drawn larger (0.55 rather than 0.39) and without the ring
+      and eight-spoke burst. Those details are a couple of pixels wide once a
+      108dp canvas is rendered at 48dp, so they turn to mush; the padlock is
+      enlarged to fill the space they leave.
+
+  Hairline strokes on the kitten are thickened for the same reason, and the
+  whiskers, ear creases and eye highlights are left out entirely.
+
+  Geometry: the composition spans x 223.5..456.5 and y 76..496 in the SVG's
+  coordinates, so it is centred on (340, 286) and scaled by 0.146, which puts
+  the outermost points (the ear tips) 34 units from the centre of the 108dp
+  canvas - just inside the 66dp safe circle's 33, and clear of the 72dp mask.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:translateX="54" android:translateY="54">
+        <group android:scaleX="0.146" android:scaleY="0.146">
+            <group android:translateX="-340" android:translateY="-286">
+
+                <!-- Shield and padlock. Drawn first so the kitten's head
+                     covers the shield's point, which reads as the shield
+                     being tucked in behind it. -->
+                <group android:translateX="340" android:translateY="375">
+                    <group android:scaleX="0.55" android:scaleY="0.55">
+                        <group android:translateX="-200.5" android:translateY="-221">
+                            <path
+                                android:strokeColor="#ABD4B2"
+                                android:strokeWidth="30"
+                                android:strokeLineJoin="round"
+                                android:strokeLineCap="round"
+                                android:pathData="M200.5,18 L28.5,79 C25,132 25,192 35,238 C50,300 95,376 200.5,426 C306,376 351,300 366,238 C376,192 376,132 372.5,79 Z" />
+                            <group android:translateX="200.5" android:translateY="240">
+                                <group android:scaleX="1.3" android:scaleY="1.3">
+                                    <group android:translateX="-200.5" android:translateY="-212.25">
+                                        <path
+                                            android:strokeColor="#C0DDBA"
+                                            android:strokeWidth="19"
+                                            android:pathData="M161,172 L161,128.5 A39.5,39.5 0 0 1 240,128.5 L240,172" />
+                                        <path
+                                            android:fillColor="#C0DDBA"
+                                            android:fillType="evenOdd"
+                                            android:pathData="M130,180 A14,14 0 0 1 144,166 L257,166 A14,14 0 0 1 271,180 L271,235 A70.5,70.5 0 0 1 130,235 Z M190.5,235 A18,18 0 1 1 210.5,235 L213.5,250 A13,13 0 0 1 187.5,250 Z" />
+                                    </group>
+                                </group>
+                            </group>
+                        </group>
+                    </group>
+                </group>
+
+                <!-- Ears. -->
+                <path android:fillColor="#AAB2BA" android:strokeColor="#8A929A" android:strokeWidth="6" android:strokeLineJoin="round" android:pathData="M255,160 L235,78 L312,128 Z" />
+                <path android:fillColor="#AAB2BA" android:strokeColor="#8A929A" android:strokeWidth="6" android:strokeLineJoin="round" android:pathData="M425,160 L445,78 L368,128 Z" />
+                <path android:fillColor="#E6C9CF" android:pathData="M260,150 L248,100 L297,132 Z" />
+                <path android:fillColor="#E6C9CF" android:pathData="M420,150 L432,100 L383,132 Z" />
+
+                <!-- Head and muzzle. -->
+                <path android:fillColor="#C7CDD3" android:strokeColor="#9AA3AB" android:strokeWidth="6" android:pathData="M225,240 A115,115 0 0 1 455,240 L455,260 L225,260 Z" />
+                <path android:fillColor="#F2F4F6" android:pathData="M282,225 A58,40 0 1 0 398,225 A58,40 0 1 0 282,225 Z" />
+
+                <!-- Eyes, cheeks, nose, mouth. -->
+                <path android:fillColor="#3A3F45" android:pathData="M282,188 A18,18 0 1 0 318,188 A18,18 0 1 0 282,188 Z" />
+                <path android:fillColor="#3A3F45" android:pathData="M362,188 A18,18 0 1 0 398,188 A18,18 0 1 0 362,188 Z" />
+                <path android:fillColor="#F2B8C6" android:fillAlpha="0.6" android:pathData="M246,222 A20,11 0 1 0 286,222 A20,11 0 1 0 246,222 Z" />
+                <path android:fillColor="#F2B8C6" android:fillAlpha="0.6" android:pathData="M394,222 A20,11 0 1 0 434,222 A20,11 0 1 0 394,222 Z" />
+                <path android:fillColor="#E07A8F" android:pathData="M328,210 L352,210 L340,225 Z" />
+                <path android:strokeColor="#3A3F45" android:strokeWidth="9" android:strokeLineCap="round" android:pathData="M340,225 L340,233" />
+                <path android:strokeColor="#3A3F45" android:strokeWidth="11" android:strokeLineCap="round" android:pathData="M300,238 Q340,266 380,238" />
+
+                <!-- Paws hooked over the shield. -->
+                <group android:rotation="-8" android:pivotX="270" android:pivotY="250">
+                    <path android:fillColor="#C7CDD3" android:strokeColor="#9AA3AB" android:strokeWidth="6" android:pathData="M238,250 A32,24 0 1 0 302,250 A32,24 0 1 0 238,250 Z" />
+                </group>
+                <group android:rotation="8" android:pivotX="410" android:pivotY="250">
+                    <path android:fillColor="#C7CDD3" android:strokeColor="#9AA3AB" android:strokeWidth="6" android:pathData="M378,250 A32,24 0 1 0 442,250 A32,24 0 1 0 378,250 Z" />
+                </group>
+            </group>
+        </group>
+    </group>
+</vector>

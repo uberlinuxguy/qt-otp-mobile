@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Matches Theme.kt's surface so the pre-Compose window does not flash a
+         different colour on launch. -->
+    <color name="window_background">#FAFCF6</color>
+    <!-- The badge green from art/qt-otp.svg; the icon foreground is drawn to
+         sit on exactly this colour. -->
+    <color name="ic_launcher_background">#294A2F</color>
+</resources>

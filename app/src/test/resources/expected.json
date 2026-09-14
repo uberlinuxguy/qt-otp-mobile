@@ -1,0 +1,217 @@
+{
+  "password": "correct horse battery staple",
+  "canonical_aad": "{\"cipher\":\"AES-256-GCM\",\"kdf\":{\"dklen\":32,\"n\":32768,\"name\":\"scrypt\",\"p\":1,\"r\":8,\"salt\":\"olBodhGHrfJxnEWSt12rjw==\"},\"magic\":\"qt-otp-vault\",\"nonce\":\"ijUXpQIgQySMoaeD\",\"version\":1}",
+  "derived_key_b64": "bJtDUzb+mQBmKaB+YQyEgE9+xMurwENcNI9XYqSP7Bc=",
+  "plaintext": {
+    "payload_version": 1,
+    "updated_at": 1789051950.7835834,
+    "entries": [
+      {
+        "id": "00000000000000000000000000000001",
+        "issuer": "GitHub",
+        "account": "octocat",
+        "secret": "JBSWY3DPEHPK3PXP",
+        "digits": 6,
+        "period": 30,
+        "algorithm": "SHA1",
+        "notes": "",
+        "created_at": 1700000000.0
+      },
+      {
+        "id": "00000000000000000000000000000002",
+        "issuer": "AWS",
+        "account": "root@example.com",
+        "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+        "digits": 8,
+        "period": 30,
+        "algorithm": "SHA256",
+        "notes": "prod account",
+        "created_at": 1700000001.0
+      },
+      {
+        "id": "00000000000000000000000000000003",
+        "issuer": "Bank",
+        "account": "jason",
+        "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+        "digits": 7,
+        "period": 60,
+        "algorithm": "SHA512",
+        "notes": "line1\nline2",
+        "created_at": 1700000002.0
+      },
+      {
+        "id": "00000000000000000000000000000004",
+        "issuer": "Zürich Bahn ☕",
+        "account": "pendler",
+        "secret": "JBSWY3DPEHPK3PXP",
+        "digits": 6,
+        "period": 30,
+        "algorithm": "SHA1",
+        "notes": "ümlaut",
+        "created_at": 1700000003.0
+      }
+    ]
+  },
+  "envelope_keys": [
+    "cipher",
+    "ciphertext",
+    "kdf",
+    "magic",
+    "nonce",
+    "version"
+  ],
+  "kdf": {
+    "dklen": 32,
+    "n": 32768,
+    "name": "scrypt",
+    "p": 1,
+    "r": 8,
+    "salt": "olBodhGHrfJxnEWSt12rjw=="
+  },
+  "codes": [
+    {
+      "id": "00000000000000000000000000000001",
+      "uri": "otpauth://totp/GitHub%3Aoctocat?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=GitHub",
+      "at": 0.0,
+      "code": "282760"
+    },
+    {
+      "id": "00000000000000000000000000000001",
+      "uri": "otpauth://totp/GitHub%3Aoctocat?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=GitHub",
+      "at": 1234567890.0,
+      "code": "742275"
+    },
+    {
+      "id": "00000000000000000000000000000001",
+      "uri": "otpauth://totp/GitHub%3Aoctocat?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=GitHub",
+      "at": 1700000000.0,
+      "code": "324550"
+    },
+    {
+      "id": "00000000000000000000000000000001",
+      "uri": "otpauth://totp/GitHub%3Aoctocat?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=GitHub",
+      "at": 59.0,
+      "code": "996554"
+    },
+    {
+      "id": "00000000000000000000000000000001",
+      "uri": "otpauth://totp/GitHub%3Aoctocat?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=GitHub",
+      "at": 1111111109.0,
+      "code": "071271"
+    },
+    {
+      "id": "00000000000000000000000000000001",
+      "uri": "otpauth://totp/GitHub%3Aoctocat?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=GitHub",
+      "at": 2000000000.0,
+      "code": "890699"
+    },
+    {
+      "id": "00000000000000000000000000000002",
+      "uri": "otpauth://totp/AWS%3Aroot%40example.com?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA256&digits=8&period=30&issuer=AWS",
+      "at": 0.0,
+      "code": "74875740"
+    },
+    {
+      "id": "00000000000000000000000000000002",
+      "uri": "otpauth://totp/AWS%3Aroot%40example.com?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA256&digits=8&period=30&issuer=AWS",
+      "at": 1234567890.0,
+      "code": "42829826"
+    },
+    {
+      "id": "00000000000000000000000000000002",
+      "uri": "otpauth://totp/AWS%3Aroot%40example.com?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA256&digits=8&period=30&issuer=AWS",
+      "at": 1700000000.0,
+      "code": "50869966"
+    },
+    {
+      "id": "00000000000000000000000000000002",
+      "uri": "otpauth://totp/AWS%3Aroot%40example.com?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA256&digits=8&period=30&issuer=AWS",
+      "at": 59.0,
+      "code": "32247374"
+    },
+    {
+      "id": "00000000000000000000000000000002",
+      "uri": "otpauth://totp/AWS%3Aroot%40example.com?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA256&digits=8&period=30&issuer=AWS",
+      "at": 1111111109.0,
+      "code": "34756375"
+    },
+    {
+      "id": "00000000000000000000000000000002",
+      "uri": "otpauth://totp/AWS%3Aroot%40example.com?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA256&digits=8&period=30&issuer=AWS",
+      "at": 2000000000.0,
+      "code": "78428693"
+    },
+    {
+      "id": "00000000000000000000000000000003",
+      "uri": "otpauth://totp/Bank%3Ajason?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA512&digits=7&period=60&issuer=Bank",
+      "at": 0.0,
+      "code": "9763438"
+    },
+    {
+      "id": "00000000000000000000000000000003",
+      "uri": "otpauth://totp/Bank%3Ajason?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA512&digits=7&period=60&issuer=Bank",
+      "at": 1234567890.0,
+      "code": "7035359"
+    },
+    {
+      "id": "00000000000000000000000000000003",
+      "uri": "otpauth://totp/Bank%3Ajason?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA512&digits=7&period=60&issuer=Bank",
+      "at": 1700000000.0,
+      "code": "4818914"
+    },
+    {
+      "id": "00000000000000000000000000000003",
+      "uri": "otpauth://totp/Bank%3Ajason?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA512&digits=7&period=60&issuer=Bank",
+      "at": 59.0,
+      "code": "9763438"
+    },
+    {
+      "id": "00000000000000000000000000000003",
+      "uri": "otpauth://totp/Bank%3Ajason?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA512&digits=7&period=60&issuer=Bank",
+      "at": 1111111109.0,
+      "code": "9433592"
+    },
+    {
+      "id": "00000000000000000000000000000003",
+      "uri": "otpauth://totp/Bank%3Ajason?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA512&digits=7&period=60&issuer=Bank",
+      "at": 2000000000.0,
+      "code": "5281184"
+    },
+    {
+      "id": "00000000000000000000000000000004",
+      "uri": "otpauth://totp/Z%C3%BCrich%20Bahn%20%E2%98%95%3Apendler?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=Z%C3%BCrich+Bahn+%E2%98%95",
+      "at": 0.0,
+      "code": "282760"
+    },
+    {
+      "id": "00000000000000000000000000000004",
+      "uri": "otpauth://totp/Z%C3%BCrich%20Bahn%20%E2%98%95%3Apendler?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=Z%C3%BCrich+Bahn+%E2%98%95",
+      "at": 1234567890.0,
+      "code": "742275"
+    },
+    {
+      "id": "00000000000000000000000000000004",
+      "uri": "otpauth://totp/Z%C3%BCrich%20Bahn%20%E2%98%95%3Apendler?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=Z%C3%BCrich+Bahn+%E2%98%95",
+      "at": 1700000000.0,
+      "code": "324550"
+    },
+    {
+      "id": "00000000000000000000000000000004",
+      "uri": "otpauth://totp/Z%C3%BCrich%20Bahn%20%E2%98%95%3Apendler?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=Z%C3%BCrich+Bahn+%E2%98%95",
+      "at": 59.0,
+      "code": "996554"
+    },
+    {
+      "id": "00000000000000000000000000000004",
+      "uri": "otpauth://totp/Z%C3%BCrich%20Bahn%20%E2%98%95%3Apendler?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=Z%C3%BCrich+Bahn+%E2%98%95",
+      "at": 1111111109.0,
+      "code": "071271"
+    },
+    {
+      "id": "00000000000000000000000000000004",
+      "uri": "otpauth://totp/Z%C3%BCrich%20Bahn%20%E2%98%95%3Apendler?secret=JBSWY3DPEHPK3PXP&algorithm=SHA1&digits=6&period=30&issuer=Z%C3%BCrich+Bahn+%E2%98%95",
+      "at": 2000000000.0,
+      "code": "890699"
+    }
+  ]
+}

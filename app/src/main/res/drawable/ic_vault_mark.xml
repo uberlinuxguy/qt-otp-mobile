@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The product mark: the vault shield with the kitten peeking over it.
+
+  Traced from art/qt-otp.svg, whose viewBox is "205 58 270 422"; the outer
+  group shifts that origin to 0,0 so the viewport below can start at zero.
+  Shapes the SVG expressed as rect/circle/ellipse are written out as paths
+  here, because VectorDrawable only understands path.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="169dp"
+    android:viewportWidth="270"
+    android:viewportHeight="422">
+    <group
+        android:translateX="-205"
+        android:translateY="-58">
+
+        <!-- The badge the shield sits on. -->
+        <path
+            android:fillColor="#294A2F"
+            android:pathData="M260,240 L420,240 A30,30 0 0 1 450,270 L450,430 A30,30 0 0 1 420,460 L260,460 A30,30 0 0 1 230,430 L230,270 A30,30 0 0 1 260,240 Z" />
+
+        <!-- Shield, ring and padlock, drawn in their own 401x442 space. -->
+        <group android:translateX="340" android:translateY="350">
+            <group android:scaleX="0.39" android:scaleY="0.39">
+                <group android:translateX="-200.5" android:translateY="-221">
+
+                    <path
+                        android:strokeColor="#ABD4B2"
+                        android:strokeWidth="24"
+                        android:strokeLineJoin="round"
+                        android:strokeLineCap="round"
+                        android:pathData="M200.5,18 L28.5,79 C25,132 25,192 35,238 C50,300 95,376 200.5,426 C306,376 351,300 366,238 C376,192 376,132 372.5,79 Z" />
+                    <path
+                        android:strokeColor="#71A071"
+                        android:strokeWidth="20"
+                        android:pathData="M311.5,226 A111,111 0 0 1 200.5,337" />
+                    <path
+                        android:strokeColor="#C0DDBA"
+                        android:strokeWidth="20"
+                        android:pathData="M200.5,337 A111,111 0 0 1 135.3,136.2" />
+
+                    <!-- The eight-spoke burst and its ring. -->
+                    <group android:translateX="294.5" android:translateY="168">
+                        <group>
+                            <path android:fillColor="#C0DDBA" android:pathData="M-5,-38 L5,-38 A3,3 0 0 1 8,-35 L8,-21 A3,3 0 0 1 5,-18 L-5,-18 A3,3 0 0 1 -8,-21 L-8,-35 A3,3 0 0 1 -5,-38 Z" />
+                        </group>
+                        <group android:rotation="45">
+                            <path android:fillColor="#C0DDBA" android:pathData="M-5,-38 L5,-38 A3,3 0 0 1 8,-35 L8,-21 A3,3 0 0 1 5,-18 L-5,-18 A3,3 0 0 1 -8,-21 L-8,-35 A3,3 0 0 1 -5,-38 Z" />
+                        </group>
+                        <group android:rotation="90">
+                            <path android:fillColor="#C0DDBA" android:pathData="M-5,-38 L5,-38 A3,3 0 0 1 8,-35 L8,-21 A3,3 0 0 1 5,-18 L-5,-18 A3,3 0 0 1 -8,-21 L-8,-35 A3,3 0 0 1 -5,-38 Z" />
+                        </group>
+                        <group android:rotation="135">
+                            <path android:fillColor="#C0DDBA" android:pathData="M-5,-38 L5,-38 A3,3 0 0 1 8,-35 L8,-21 A3,3 0 0 1 5,-18 L-5,-18 A3,3 0 0 1 -8,-21 L-8,-35 A3,3 0 0 1 -5,-38 Z" />
+                        </group>
+                        <group android:rotation="180">
+                            <path android:fillColor="#C0DDBA" android:pathData="M-5,-38 L5,-38 A3,3 0 0 1 8,-35 L8,-21 A3,3 0 0 1 5,-18 L-5,-18 A3,3 0 0 1 -8,-21 L-8,-35 A3,3 0 0 1 -5,-38 Z" />
+                        </group>
+                        <group android:rotation="225">
+                            <path android:fillColor="#C0DDBA" android:pathData="M-5,-38 L5,-38 A3,3 0 0 1 8,-35 L8,-21 A3,3 0 0 1 5,-18 L-5,-18 A3,3 0 0 1 -8,-21 L-8,-35 A3,3 0 0 1 -5,-38 Z" />
+                        </group>
+                        <group android:rotation="270">
+                            <path android:fillColor="#C0DDBA" android:pathData="M-5,-38 L5,-38 A3,3 0 0 1 8,-35 L8,-21 A3,3 0 0 1 5,-18 L-5,-18 A3,3 0 0 1 -8,-21 L-8,-35 A3,3 0 0 1 -5,-38 Z" />
+                        </group>
+                        <group android:rotation="315">
+                            <path android:fillColor="#C0DDBA" android:pathData="M-5,-38 L5,-38 A3,3 0 0 1 8,-35 L8,-21 A3,3 0 0 1 5,-18 L-5,-18 A3,3 0 0 1 -8,-21 L-8,-35 A3,3 0 0 1 -5,-38 Z" />
+                        </group>
+                        <path
+                            android:fillColor="#C0DDBA"
+                            android:fillType="evenOdd"
+                            android:pathData="M0,-28 A28,28 0 1 1 0,28 A28,28 0 1 1 0,-28 Z M0,-14 A14,14 0 1 0 0,14 A14,14 0 1 0 0,-14 Z" />
+                    </group>
+
+                    <!-- Dark outline that keeps the lock body clear of the ring. -->
+                    <path
+                        android:strokeColor="#294A2F"
+                        android:strokeWidth="16"
+                        android:strokeLineJoin="round"
+                        android:pathData="M130,180 A14,14 0 0 1 144,166 L257,166 A14,14 0 0 1 271,180 L271,235 A70.5,70.5 0 0 1 130,235 Z" />
+                    <path
+                        android:strokeColor="#C0DDBA"
+                        android:strokeWidth="19"
+                        android:pathData="M161,172 L161,128.5 A39.5,39.5 0 0 1 240,128.5 L240,172" />
+                    <path
+                        android:fillColor="#C0DDBA"
+                        android:fillType="evenOdd"
+                        android:pathData="M130,180 A14,14 0 0 1 144,166 L257,166 A14,14 0 0 1 271,180 L271,235 A70.5,70.5 0 0 1 130,235 Z M190.5,235 A18,18 0 1 1 210.5,235 L213.5,250 A13,13 0 0 1 187.5,250 Z" />
+                </group>
+            </group>
+        </group>
+
+        <!-- Ears. -->
+        <path android:fillColor="#AAB2BA" android:strokeColor="#8A929A" android:strokeWidth="3" android:strokeLineJoin="round" android:pathData="M255,160 L235,78 L312,128 Z" />
+        <path android:fillColor="#AAB2BA" android:strokeColor="#8A929A" android:strokeWidth="3" android:strokeLineJoin="round" android:pathData="M425,160 L445,78 L368,128 Z" />
+        <path android:fillColor="#E6C9CF" android:pathData="M260,150 L248,100 L297,132 Z" />
+        <path android:fillColor="#E6C9CF" android:pathData="M420,150 L432,100 L383,132 Z" />
+
+        <!-- Head and muzzle. -->
+        <path android:fillColor="#C7CDD3" android:strokeColor="#9AA3AB" android:strokeWidth="3" android:pathData="M225,240 A115,115 0 0 1 455,240 L455,260 L225,260 Z" />
+        <path android:fillColor="#F2F4F6" android:pathData="M282,225 A58,40 0 1 0 398,225 A58,40 0 1 0 282,225 Z" />
+
+        <!-- Fur creases inside the ears. -->
+        <path android:strokeColor="#8A929A" android:strokeWidth="6" android:strokeLineCap="round" android:pathData="M270,138 L285,163" />
+        <path android:strokeColor="#8A929A" android:strokeWidth="6" android:strokeLineCap="round" android:pathData="M300,118 L310,148" />
+        <path android:strokeColor="#8A929A" android:strokeWidth="6" android:strokeLineCap="round" android:pathData="M410,138 L395,163" />
+        <path android:strokeColor="#8A929A" android:strokeWidth="6" android:strokeLineCap="round" android:pathData="M380,118 L370,148" />
+
+        <!-- Eyes. -->
+        <path android:fillColor="#3A3F45" android:pathData="M285,188 A15,15 0 1 0 315,188 A15,15 0 1 0 285,188 Z" />
+        <path android:fillColor="#3A3F45" android:pathData="M365,188 A15,15 0 1 0 395,188 A15,15 0 1 0 365,188 Z" />
+        <path android:fillColor="#FFFFFF" android:pathData="M300,183 A5,5 0 1 0 310,183 A5,5 0 1 0 300,183 Z" />
+        <path android:fillColor="#FFFFFF" android:pathData="M380,183 A5,5 0 1 0 390,183 A5,5 0 1 0 380,183 Z" />
+
+        <!-- Cheeks. -->
+        <path android:fillColor="#F2B8C6" android:fillAlpha="0.6" android:pathData="M246,222 A20,11 0 1 0 286,222 A20,11 0 1 0 246,222 Z" />
+        <path android:fillColor="#F2B8C6" android:fillAlpha="0.6" android:pathData="M394,222 A20,11 0 1 0 434,222 A20,11 0 1 0 394,222 Z" />
+
+        <!-- Nose and mouth. -->
+        <path android:fillColor="#E07A8F" android:pathData="M330,212 L350,212 L340,224 Z" />
+        <path android:strokeColor="#3A3F45" android:strokeWidth="4" android:strokeLineCap="round" android:pathData="M340,224 L340,232" />
+        <path android:strokeColor="#3A3F45" android:strokeWidth="5" android:strokeLineCap="round" android:pathData="M300,238 Q340,266 380,238" />
+
+        <!-- Whiskers. -->
+        <path android:strokeColor="#8A929A" android:strokeWidth="3" android:strokeLineCap="round" android:pathData="M230,216 L285,224" />
+        <path android:strokeColor="#8A929A" android:strokeWidth="3" android:strokeLineCap="round" android:pathData="M228,234 L283,234" />
+        <path android:strokeColor="#8A929A" android:strokeWidth="3" android:strokeLineCap="round" android:pathData="M450,216 L395,224" />
+        <path android:strokeColor="#8A929A" android:strokeWidth="3" android:strokeLineCap="round" android:pathData="M452,234 L397,234" />
+
+        <!-- Paws hooked over the top of the badge. -->
+        <group android:rotation="-8" android:pivotX="270" android:pivotY="250">
+            <path android:fillColor="#C7CDD3" android:strokeColor="#9AA3AB" android:strokeWidth="3" android:pathData="M238,250 A32,24 0 1 0 302,250 A32,24 0 1 0 238,250 Z" />
+        </group>
+        <group android:rotation="8" android:pivotX="410" android:pivotY="250">
+            <path android:fillColor="#C7CDD3" android:strokeColor="#9AA3AB" android:strokeWidth="3" android:pathData="M378,250 A32,24 0 1 0 442,250 A32,24 0 1 0 378,250 Z" />
+        </group>
+    </group>
+</vector>

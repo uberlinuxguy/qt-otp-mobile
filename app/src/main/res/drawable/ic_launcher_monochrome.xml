@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Themed-icon layer. The system flattens this to a single tint, so the kitten
+  cannot come along: grey fur, pink ears and dark eyes would all collapse into
+  one silhouette and read as a blob. What survives tinting is the shield and
+  padlock, so that is all this layer draws.
+
+  Scaled by 0.137 about the shield's centre (200.5, 222), which keeps its
+  widest points - the two top corners - 33 units from the canvas centre, on
+  the 66dp safe circle.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:translateX="54" android:translateY="54">
+        <group android:scaleX="0.137" android:scaleY="0.137">
+            <group android:translateX="-200.5" android:translateY="-222">
+                <path
+                    android:strokeColor="#FFFFFF"
+                    android:strokeWidth="30"
+                    android:strokeLineJoin="round"
+                    android:strokeLineCap="round"
+                    android:pathData="M200.5,18 L28.5,79 C25,132 25,192 35,238 C50,300 95,376 200.5,426 C306,376 351,300 366,238 C376,192 376,132 372.5,79 Z" />
+                <group android:translateX="200.5" android:translateY="240">
+                    <group android:scaleX="1.3" android:scaleY="1.3">
+                        <group android:translateX="-200.5" android:translateY="-212.25">
+                            <path
+                                android:strokeColor="#FFFFFF"
+                                android:strokeWidth="19"
+                                android:pathData="M161,172 L161,128.5 A39.5,39.5 0 0 1 240,128.5 L240,172" />
+                            <path
+                                android:fillColor="#FFFFFF"
+                                android:fillType="evenOdd"
+                                android:pathData="M130,180 A14,14 0 0 1 144,166 L257,166 A14,14 0 0 1 271,180 L271,235 A70.5,70.5 0 0 1 130,235 Z M190.5,235 A18,18 0 1 1 210.5,235 L213.5,250 A13,13 0 0 1 187.5,250 Z" />
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+</vector>
