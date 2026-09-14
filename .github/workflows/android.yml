@@ -49,6 +49,15 @@ jobs:
       - name: Build debug APK
         run: ./gradlew :app:assembleDebug
 
+      # R8 and the resource shrinker only run for the release variant, and this
+      # app leans on reflection that R8 cannot see (kotlinx.serialization's
+      # generated serializers, ML Kit's model loading). Building it here means a
+      # proguard-rules mistake fails a pull request instead of a release. The
+      # APK is unsigned - no secrets are needed, and none are available to fork
+      # pull requests anyway - so it is checked, not published.
+      - name: Build release APK (unsigned, R8 check)
+        run: ./gradlew :app:assembleRelease
+
       - name: Upload test reports
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v7

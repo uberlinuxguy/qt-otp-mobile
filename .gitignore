@@ -9,5 +9,7 @@ build/
 .cxx
 local.properties
 *.keystore
-!debug.keystore
+*.jks
+*.p12
+!app/debug.keystore
 .claude/settings.local.json

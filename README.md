@@ -132,6 +132,23 @@ on every push and pull request to `main`. The APK and the test reports are
 attached to each run as artifacts, so a build can be installed on a device
 without a local toolchain.
 
+The release variant is signed only if a keystore is supplied through the
+environment; without one it still builds, unsigned:
+
+```bash
+export KEYSTORE_PATH=~/qt-otp-release.keystore
+export KEYSTORE_PASSWORD=...        # PKCS12: one password for store and key
+export KEY_ALIAS=qt-otp
+./gradlew :app:assembleRelease
+```
+
+Pushing a `v*` tag runs [the release
+workflow](.github/workflows/release.yml), which signs the APK with the keystore
+held in repository secrets and attaches it to a GitHub Release. The debug
+signing key is the committed `app/debug.keystore` — the standard, non-secret
+debug credentials — so debug builds from CI and from a local checkout share one
+identity and install over each other.
+
 ## Tests
 
 ```bash
@@ -240,8 +257,13 @@ tools/verify_interop.py   opens app-written vaults with the desktop code
   refuses non-`totp` URIs.
 - **No live sync** with a synced folder; import and export are manual, as above.
 - **No drag-to-reorder** — reordering is via each entry's menu.
-- The release variant compiles and passes R8 but is unsigned; it needs your own
-  keystore. Device testing was done with the debug build.
+- **The release variant has never been run on a device.** It is built on every
+  pull request and signed on every `v*` tag, but R8 and the resource shrinker
+  apply only to that variant, and the paths they are most likely to break —
+  kotlinx.serialization's generated serializers, ML Kit's reflective model
+  loading, Keystore unwrapping — are covered by `proguard-rules.pro` rules that
+  nothing executes. A green release build is not evidence that the release APK
+  works. Device testing was done with the debug build.
 - All automated tests cover `core/` only. `data/` and `ui/` — the store, the
   session, settings, Keystore wrapping and every screen — have no automated
   tests; their only coverage is the manual device runs above, so a refactor
