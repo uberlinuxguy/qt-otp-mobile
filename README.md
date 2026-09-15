@@ -202,6 +202,11 @@ Driven end to end with the debug build on a **Pixel 10 Pro XL (Android 17, API
 - Auto-lock fires on backgrounding, a wrong password reports "Wrong password",
   and with "Block screenshots" on, `screencap` returns a frame that is 100% pure
   black over the app area.
+- **QR scanning under R8**: the signed release APK decoded an `otpauth://`
+  code on the device, so ML Kit's bundled model loads and runs inside the
+  minified build. Note that a QR rendered with antialiased edges — an SVG
+  scaled by a fractional factor, for instance — may not be decodable by any
+  reader even though it looks correct; test with a pixel-exact image.
 - **Biometric unlock**: enabling it sealed the vault key into the Keystore —
   what lands in preferences is 48 bytes of ciphertext plus a 12-byte IV, no
   password. Locking and reopening then unwrapped it behind a real fingerprint
@@ -257,13 +262,13 @@ tools/verify_interop.py   opens app-written vaults with the desktop code
   refuses non-`totp` URIs.
 - **No live sync** with a synced folder; import and export are manual, as above.
 - **No drag-to-reorder** — reordering is via each entry's menu.
-- **The release variant has never been run on a device.** It is built on every
-  pull request and signed on every `v*` tag, but R8 and the resource shrinker
-  apply only to that variant, and the paths they are most likely to break —
-  kotlinx.serialization's generated serializers, ML Kit's reflective model
-  loading, Keystore unwrapping — are covered by `proguard-rules.pro` rules that
-  nothing executes. A green release build is not evidence that the release APK
-  works. Device testing was done with the debug build.
+- **The release variant is only partly exercised on a device.** The signed,
+  R8-minified APK was run on the Pixel 10 Pro XL: a vault was created and
+  unlocked, and an `otpauth://` QR was scanned, which covers the two
+  `proguard-rules.pro` rules most likely to be wrong — kotlinx.serialization's
+  generated serializers and ML Kit's reflective model loading. Biometric
+  unlock, import and export have been driven only in the debug build, so the
+  Keystore and file-picker paths under R8 are still untested.
 - All automated tests cover `core/` only. `data/` and `ui/` — the store, the
   session, settings, Keystore wrapping and every screen — have no automated
   tests; their only coverage is the manual device runs above, so a refactor
