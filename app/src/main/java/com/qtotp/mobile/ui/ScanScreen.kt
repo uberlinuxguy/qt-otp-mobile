@@ -2,6 +2,7 @@ package com.qtotp.mobile.ui
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.OptIn as AndroidOptIn
@@ -50,6 +51,8 @@ import com.google.mlkit.vision.common.InputImage
 import com.qtotp.mobile.core.OtpAuthUri
 import com.qtotp.mobile.core.OtpEntry
 import java.util.concurrent.Executors
+
+private const val SCAN_TAG = "QtOtpScan"
 
 /**
  * Scan an otpauth:// QR code.
@@ -201,6 +204,12 @@ private fun CameraPreview(onText: (String) -> Unit) {
                         delivered = true
                         onText(value)
                     }
+                }
+                // Without this the whole recognition path fails silently: every
+                // frame errors, every frame is closed, and the screen just sits
+                // there looking like a camera that sees nothing.
+                .addOnFailureListener { error ->
+                    Log.e(SCAN_TAG, "barcode scanning failed", error)
                 }
                 .addOnCompleteListener { imageProxy.close() }
         }

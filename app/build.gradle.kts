@@ -54,6 +54,13 @@ android {
     }
 
     buildTypes {
+        // A distinct application id so a debug build installs beside a release
+        // one instead of replacing it. Replacing it would mean an uninstall -
+        // different signing key - and an uninstall takes the vault with it.
+        debug {
+            applicationIdSuffix = ".debug"
+        }
+
         release {
             signingConfig = if (signRelease) signingConfigs.getByName("release") else null
             isMinifyEnabled = true
