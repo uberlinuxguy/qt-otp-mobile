@@ -49,6 +49,12 @@ android {
                 // The keystore is PKCS12, which keeps a single password for
                 // the store and the key it holds.
                 keyPassword = releaseKeystorePassword.get()
+                // v3 carries the signing lineage, so a future key rotation is
+                // something Android 9+ will accept. Without it the only way off
+                // this key is asking every user to uninstall - which, for this
+                // app, means losing the vault. v1 stays off: minSdk is 26.
+                enableV2Signing = true
+                enableV3Signing = true
             }
         }
     }
