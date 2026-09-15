@@ -183,7 +183,10 @@ implementation.
 ## Verified on a device
 
 Driven end to end with the debug build on a **Pixel 10 Pro XL (Android 17, API
-37)** and on an Android 17 emulator (API 37, 16 KB page size):
+37)** and on an Android 17 emulator (API 37, 16 KB page size). The signed
+release build — R8-minified and resource-shrunk — was then driven through vault
+creation and unlock, QR scanning, importing a desktop vault, exporting an
+encrypted copy, and biometric unlock on the same phone:
 
 - A vault written by qt-otp's Python was dropped into app storage; the app
   detected it, unlocked it with the desktop password, and listed all four
@@ -262,13 +265,11 @@ tools/verify_interop.py   opens app-written vaults with the desktop code
   refuses non-`totp` URIs.
 - **No live sync** with a synced folder; import and export are manual, as above.
 - **No drag-to-reorder** — reordering is via each entry's menu.
-- **The release variant is only partly exercised on a device.** The signed,
-  R8-minified APK was run on the Pixel 10 Pro XL: a vault was created and
-  unlocked, and an `otpauth://` QR was scanned, which covers the two
-  `proguard-rules.pro` rules most likely to be wrong — kotlinx.serialization's
-  generated serializers and ML Kit's reflective model loading. Biometric
-  unlock, import and export have been driven only in the debug build, so the
-  Keystore and file-picker paths under R8 are still untested.
+- **Nothing about the release variant is checked automatically.** Every flow
+  listed above was driven by hand once against a signed R8 build; CI only
+  proves that build compiles. A `proguard-rules.pro` regression — a renamed
+  serializer, a stripped ML Kit class — would pass CI and reach a release, and
+  the only way to catch it is to repeat that manual pass.
 - All automated tests cover `core/` only. `data/` and `ui/` — the store, the
   session, settings, Keystore wrapping and every screen — have no automated
   tests; their only coverage is the manual device runs above, so a refactor
